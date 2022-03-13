@@ -1,0 +1,62 @@
+<div class="home-background">
+
+    <div class="container">
+        <br />
+
+        <div class="row">
+
+            <div class="col"></div>
+
+            <div class="col-8">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                        <mat-card-title>{{agent.displayName}}</mat-card-title>
+                        <mat-card-subtitle>{{agent.role.displayName}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="{{agent.fullPortrait}}" alt="">
+                    <mat-card-content>
+                        <p>
+                            {{agent.description}}
+                        </p>
+
+                        <h2>Role</h2>
+                        <p>
+                            <b>Name:</b> {{agent.role.displayName}}
+                        </p>
+                        <p>
+                            <b>Description:</b> {{agent.role.description}}
+                        </p>
+
+                        <h2>Abilities</h2>
+
+                        <div *ngFor="let ability of agent.abilities">
+
+                            <p *ngIf="!ability.displayIcon != null && ability.displayIcon.includes('https')">
+                                <b>{{ability.displayName}}</b>
+                            </p>
+
+                            <div class="row ability-content" *ngIf="!ability.displayIcon != null && ability.displayIcon.includes('https')">
+                                <div class="col-1"></div>
+                                    <img mat-card-md-image src="{{ability.displayIcon}}" alt="">  
+                                <div class="col">
+                                    <p>
+                                        {{ability.description}}
+                                    </p>
+                                </div>
+                            </div>
+
+                            <br>
+                        </div>
+
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button color="primary" (click)="backToPreviousPage()">Back</button>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+
+            <div class="col"></div>
+        </div>
+        <br />
+    </div>
+</div>
