@@ -10,23 +10,46 @@ export class AppComponent {
   title = 'valorant-app';
 
   showHead: boolean = false;
-  showFooter: boolean = false; 
+  showFooter: boolean = false;
 
   ngOnInit() {
   }
 
   constructor(private router: Router) {
-  // on route change to '/login', set the variable showHead to false
+    
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-
-        if (event['url'] == '/') { 
+        debugger;
+        if (event['url'] == '/' || event['url'] == '/register') {
           this.showHead = false;
           this.showFooter = false;
-        } else { 
-          // console.log("NU")
-          this.showHead = true;
-          this.showFooter = true;
+        } else {
+           
+          const path = this.router.config.find(r => r.path?.includes(event['url'].substring(1)) != undefined);          
+
+          if (this.router.config.find(r => r.path == event['url'].substring(1)) != undefined ||
+              path?.path != '') {
+            this.showHead = true;
+            this.showFooter = true;
+          } else {
+
+          let pathMathces = false;
+
+          this.router.config.forEach(element => {
+            
+            let test:string  = element.path!;
+
+            if(test != '' && event['url'].includes(test))
+              pathMathces = true;            
+
+          });
+
+            if(pathMathces)
+              return;
+
+            this.showHead = false;
+            this.showFooter = false;
+          }
         }
       }
     });

@@ -16,6 +16,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AgentViewComponent } from './agent-view/agent-view.component';
+import { RegisterComponent } from './register/register.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { AgentViewComponent } from './agent-view/agent-view.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    AgentViewComponent
+    AgentViewComponent,
+    RegisterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

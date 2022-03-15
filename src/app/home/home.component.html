@@ -4,9 +4,8 @@
 
         <br />
 
-        <div *ngFor="let agent of agents.data; let i = index">
+        <div *ngFor="let agent of agents.data">
 
-            <!-- <div *ngIf="i % 3 == 0"> -->
             <div>
                 <div *ngIf="agent.role != null" class="row">
 
@@ -26,42 +25,11 @@
                             </mat-card-content>
 
                             <button class="form-button-action" color="primary" mat-button (click)="viewAgent(agent.uuid)">See more</button>
+                            
                         </mat-card>
                     </div>
 
                     <div class="col"></div>
-                    <!-- <div class="col">
-                        <mat-card *ngIf="agents.data[i+1].displayName != null" class="example-card">
-                            <mat-card-title-group>
-                                <mat-card-title>{{agents.data[i+1].displayName}}</mat-card-title>
-                                <mat-card-subtitle *ngIf="agent.role != null">{{agents.data[i+1].displayName}}
-                                </mat-card-subtitle>
-                                <img mat-card-md-image src="{{agents.data[i+1].displayIcon}}">
-                            </mat-card-title-group>
-                            <br />
-                            <mat-card-content>
-                                {{agents.data[i+1].description}}
-                            </mat-card-content>
-
-                            <button class="form-button-action" color="primary" mat-button>See more</button>
-                        </mat-card>
-                    </div> -->
-                    <!-- <div class="col">
-                        <mat-card *ngIf="agents.data[i+2].displayName != null" class="example-card">
-                            <mat-card-title-group>
-                                <mat-card-title>{{agents.data[i+2].displayName}}</mat-card-title>
-                                <mat-card-subtitle *ngIf="agent.role != null">{{agents.data[i+2].displayName}}
-                                </mat-card-subtitle>
-                                <img mat-card-md-image src="{{agents.data[i+2].displayIcon}}">
-                            </mat-card-title-group>
-                            <br />
-                            <mat-card-content>
-                                {{agents.data[i+2].description}}
-                            </mat-card-content>
-
-                            <button class="form-button-action" color="primary" mat-button>See more</button>
-                        </mat-card>
-                    </div> -->
                 </div>
 
                 <br *ngIf="agent.role != null" />
