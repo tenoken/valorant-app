@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -10,16 +10,16 @@ import { Router } from '@angular/router';
 export class LoginComponent {// implements OnInit
 
   email = new FormControl('', [Validators.required, Validators.email, Validators.pattern(/\.com/)]);
-  password = new FormControl('', [Validators.required, Validators.pattern(/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,32}$/)]);
+  password = new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&]).{8,32}$/)]);
   
   constructor(private router: Router) {
 
     
   }
 
-  ngOnInit(): void {
+  // ngOnInit(): void {
     
-  }
+  // }
 
   //Functions
 
@@ -61,7 +61,7 @@ export class LoginComponent {// implements OnInit
 
     if (this.password.hasError('pattern')) {
       
-      if(!this.password.value.match(/[0-9]/)){
+      if(!this.password.value.match(/\d/)){
         return 'Password needs at least one digit';
       }
 
@@ -77,7 +77,7 @@ export class LoginComponent {// implements OnInit
         return 'Password needs at least one special character';
       }
 
-      if(!this.password.value.match(/.{8,32}/)){
+      if(!this.password.value.match(/^.{8,32}$/)){
         return 'Password needs at least 8 characters length and 32 at maximum.';
       }
     }
