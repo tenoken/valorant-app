@@ -19,6 +19,8 @@ import { AgentViewComponent } from './agent-view/agent-view.component';
 import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { AgentApiService } from './services/agent/agent-api.service';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
@@ -44,7 +47,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     ReactiveFormsModule 
   ],
-  providers: [],
+  providers: [AgentApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

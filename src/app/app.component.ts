@@ -12,8 +12,8 @@ export class AppComponent {
   showHead: boolean = false;
   showFooter: boolean = false;
 
-  ngOnInit() {
-  }
+  // ngOnInit() {
+  // }
 
   constructor(private router: Router) {
     
