@@ -10,7 +10,7 @@ import { AgentApiService } from '../services/agent/agent-api.service';
 export class HomeComponent implements OnInit {
 
     constructor(private router: Router, 
-        private activatedRoute: ActivatedRoute, 
+        //private activatedRoute: ActivatedRoute, 
         private valorantAppService: AgentApiService) { }
 
     ngOnInit(): void {

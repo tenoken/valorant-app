@@ -45,7 +45,7 @@ import { AgentApiService } from './services/agent/agent-api.service';
     MatIconModule,
     MatCheckboxModule,
     MatToolbarModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule, 
   ],
   providers: [AgentApiService],
   bootstrap: [AppComponent]

@@ -36,7 +36,7 @@ export class LoginComponent {// implements OnInit
   }
 
   getUsernameErrorMessage() {
-    debugger;
+    
     if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
@@ -52,8 +52,7 @@ export class LoginComponent {// implements OnInit
     return '';
   }
 
-  getPasswordErrorMessage(){
-    debugger;
+  getPasswordErrorMessage(){    
 
     if (this.password.hasError('required')) {
       return 'You must enter a value';

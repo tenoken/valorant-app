@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   hide = true;
 
   getUsernameErrorMessage() {
-    debugger;
+    
     if (this.email.hasError('required')) {
       return 'You must enter a value';
     }
@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
   }
 
   getPasswordErrorMessage(){
-    debugger;
+
 
     if (this.password.hasError('required')) {
       return 'You must enter a value';

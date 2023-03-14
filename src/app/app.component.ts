@@ -19,7 +19,7 @@ export class AppComponent {
     
     router.events.forEach((event) => {
       if (event instanceof NavigationStart) {
-        debugger;
+     
         if (event['url'] == '/' || event['url'] == '/register') {
           this.showHead = false;
           this.showFooter = false;

@@ -8,7 +8,7 @@ import { catchError, map, throwError } from 'rxjs';
 
 export class AgentApiService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient) {  }
 
   private readonly BASE_URL: string = "https://valorant-api.com/v1/";
 

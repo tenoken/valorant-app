@@ -28,21 +28,21 @@ describe('HeaderComponent', () => {
   //DOM render tests
 
   it('should have a span with "Valorant App" text', () => {
-    debugger;
+
     const element: HTMLElement = fixture.nativeElement;
     const buttons = element.querySelector('span')!;
     expect(buttons.textContent).toEqual('Valorant App');
   });
 
   it('should have a button with "Logout" and icon "logout" text', () => {
-    debugger;
+   
     const element: HTMLElement = fixture.nativeElement;
     const buttons = element.querySelector('button')!;
     expect(buttons.textContent).toEqual('Logout logout');
   });
 
   it('should have an anchor routing to home', () => {
-    debugger;
+
     const element: HTMLElement = fixture.nativeElement;
     const buttons = element.querySelector('a')!;
     expect(buttons.attributes[1].value).toEqual('/home');
