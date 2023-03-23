@@ -1,0 +1,9 @@
+*.md
+.git
+.vscode
+.gitignore
+.github
+sonar-project.properties
+
+
+
