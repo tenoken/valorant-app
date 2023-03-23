@@ -6,4 +6,6 @@ RUN npm install -g @angular/cli
 COPY . .
 RUN npm run build
 EXPOSE 4200
+RUN chmod -R 777 /usr/src/app
+USER node
 CMD ["ng", "serve", "--host", "0.0.0.0"]
