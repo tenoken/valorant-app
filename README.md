@@ -1,3 +1,9 @@
+![Build status](https://github.com/github/docs/actions/workflows/main.yml/badge.svg?branch=main)
+
+[![Quality Gate Status](http://sonarqubeappservice333.azurewebsites.net/api/project_badges/measure?project=b05c0d5c-c3dd-4780-a691-033909fcea2f&metric=alert_status&token=sqb_55fbc202c7a313949a86fa5987dd862f5f62028d)](http://sonarqubeappservice333.azurewebsites.net/dashboard?id=b05c0d5c-c3dd-4780-a691-033909fcea2f)
+
+[![Build status](https://dev.azure.com/shiroiparadina/valorant-app/_apis/build/status/valorant-app-CI)](https://dev.azure.com/shiroiparadina/valorant-app/_build/latest?definitionId=2)
+
 # ValorantApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.6.
